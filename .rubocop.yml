@@ -1,0 +1,30 @@
+# Inherit Shopify rubocop config
+# https://github.com/Shopify/ruby-style-guide
+inherit_gem:
+  rubocop-shopify: rubocop.yml
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/*'
+    - 'node_modules/**/*'
+
+# Override rules
+# Rules detail: https://docs.rubocop.org/rubocop/cops.html#available-cops
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: single_quotes
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 20
