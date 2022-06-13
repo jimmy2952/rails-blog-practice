@@ -20,7 +20,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -62,3 +62,5 @@ gem 'rubocop-rails', require: false
 gem "rubocop-shopify", require: false
 gem 'rubocop-performance', require: false
 gem 'rubocop-rspec', require: false
+
+gem 'will_paginate', '~> 3.3'
